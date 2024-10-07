@@ -6,6 +6,7 @@ const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
 const game = document.getElementById("game");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
+const loader = document.getElementById('loader')
 
 let currentQuestion = {};
 let acceptingAnswer = false;
@@ -55,6 +56,9 @@ startGame = () => {
   questionCounter = 0;
   score = 0;
   availableQuestion = [...questions];
+
+  loader.classList.add('hidden');
+  game.classList.remove('hidden')
 
   getNewQuestion();
 };
@@ -108,13 +112,7 @@ choices.forEach((choice) => {
     })
 })
 
-
 increamentScore = (num) => {
     score += num;
     scoreText.innerText = score;
 }
-
-
-
-
-

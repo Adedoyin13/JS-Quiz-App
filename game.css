@@ -14,82 +14,82 @@
   cursor: pointer;
 }
   
-  .choice-prefix {
-    padding: 1.5rem 2.5rem;
-    background-color: #56a5eb;
-    color: white;
-  }
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: #56a5eb;
+  color: white;
+}
   
-  .choice-text {
-    padding: 1.5rem;
-    width: 100%;
-  }
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+}
   
-  .correct {
-    background-color: #28a745;
-  }
+.correct {
+  background-color: #28a745;
+}
   
-  .incorrect {
-    background-color: #dc3545;
-  }
+.incorrect {
+  background-color: #dc3545;
+}
   
-  /* HUD */
-  #hud {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+/* HUD */
+#hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
   
-  .hud-prefix {
-    text-align: center;
-    font-size: 2rem;
-  }
+.hud-prefix {
+  text-align: center;
+  font-size: 2rem;
+}
   
-  .hud-main-text {
-    text-align: center;
-  }
+.hud-main-text {
+  text-align: center;
+}
   
-  #progressBar {
-    width: 20rem;
-    height: 4rem;
-    border: 0.3rem solid #56a5eb;
-    margin-top: 1.5rem;
-  }
+#progressBar {
+  width: 20rem;
+  height: 4rem;
+  border: 0.3rem solid #56a5eb;
+  margin-top: 1.5rem;
+}
   
-  #progressBarFull {
-    height: 3.7rem;
-    background-color: #56a5eb;
-    width: 0%;
-  }
+#progressBarFull {
+  height: 3.7rem;
+  background-color: #56a5eb;
+  width: 0%;
+}
   
-  /* loader */
-  #loader {
-    border: 1.6rem solid white;
-    border-top: 1.6rem solid #56a5eb;
-    width: 12rem;
-    height: 12rem;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    animation: spin 2s linear infinite;
-    -webkit-animation: spin 2s linear infinite;
-  }
+/* loader */
+#loader {
+  border: 1.6rem solid white;
+  border-top: 1.6rem solid #56a5eb;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+}
   
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-      -webkit-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-    }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
   }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
