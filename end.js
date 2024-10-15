@@ -1,29 +1,36 @@
-const username = document.getElementById('username');
-const saveScoreButton = document.getElementById('saveScoreBtn');
-const finalScore = document.getElementById('finalScore');
-const mostRecentScore = localStorage.getItem('mostRecentScore');
-const highScore = JSON.parse(localStorage.getItem('highScore')) || []; 
+const username = document.getElementById("username");
+const saveScoreBtn = document.getElementById("saveScoreBtn");
+const finalScore = document.getElementById("finalScore");
+const mostRecentScore = localStorage.getItem("mostRecentScore");
 
-username.addEventListener('keyup', () => {
-    saveScoreButton.disabled = !username.value;
-})
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+const MAX_HIGH_SCORES = 5;
+
+finalScore.innerText = mostRecentScore;
+
+username.addEventListener("keyup", () => {
+  saveScoreBtn.disabled = !username.value;
+});
 
 const saveHighScore = () => {
-    const score = {
-        name: username.value,
-        score: mostRecentScore
-    };
-    highScore.push(score);
-    highScore.sort((a, b) => (b.score - a.score));
-    highScore.splice(5);
-    localStorage.setItem('highScore', JSON.stringify(highScore));
-    window.location.assign('index.html')
-}
 
-saveHighScore.addEventListener('click', (event) => {
-    event.preventDefault();
-    saveHighScore()
-})
+  const score = {
+      score: mostRecentScore,
+      name: username.value,
+  };
+  highScores.push(score);
+  highScores.sort((a, b) => b.score - a.score);
+  highScores.splice(5);
 
+  console.log(highScores)
 
+  localStorage.setItem('highScores', JSON.stringify(highScores));
+  window.location.assign("./index.html")
+};
 
+saveScoreBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  saveHighScore();
+});
